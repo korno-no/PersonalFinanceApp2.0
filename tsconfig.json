@@ -1,10 +1,18 @@
 {
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./vite.config.ts"
     ],
     "compilerOptions": {
         "strict": true,
         "esModuleInterop": true,
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "target": "ESNext",
+        "skipLibCheck": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "types": ["vite/client"],
         "lib": [
             "dom",
             "es2015"
