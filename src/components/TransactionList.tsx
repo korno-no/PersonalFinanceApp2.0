@@ -7,13 +7,13 @@ export default function TransactionList({ transactions }: { transactions: TypeTr
   return (
     <Card>
       <h2>Transactions</h2>
-      <li>
+      <ul>
         {transactions.map((tx) => (
-          <ul>
+          <li key={tx.id}>
             <Transaction amount={tx.amount} />
-          </ul>
+          </li>
         ))}
-      </li>
+      </ul>
     </Card>
   );
 }
