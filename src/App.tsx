@@ -1,6 +1,6 @@
-import "./styles.css";
-import Dashboard from "./components/Dashboard";
-import Sidebar from "./components/Sidebar";
+import styles from "./App.module.css";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Sidebar from "./components/Sidebar/Sidebar";
 import type { TypeTransaction } from "./types/transaction";
 
 const mockTransactionsList: TypeTransaction[] = [
@@ -26,9 +26,11 @@ const mockTransactionsList: TypeTransaction[] = [
 
 export default function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Sidebar />
-      <Dashboard transactions={mockTransactionsList} />
+      <main className={styles.mainContent}>
+        <Dashboard transactions={mockTransactionsList} />
+      </main>
     </div>
   );
 }

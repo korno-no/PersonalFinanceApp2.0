@@ -1,8 +1,10 @@
-import BalanceCard from "./BalanceCard";
-import IncomeCard from "./IncomeCard";
-import ExpensesCard from "./ExpensesCard";
-import TransactionList from "./TransactionList";
-import type { TypeTransaction } from "../types/transaction";
+import BalanceCard from "../BalanceCard";
+import IncomeCard from "../IncomeCard";
+import ExpensesCard from "../ExpensesCard";
+import TransactionList from "../TransactionList";
+import type { TypeTransaction } from "../../types/transaction";
+import styles from './Dashboard.module.css';
+
 
 export default function Dashboard({ transactions }: { transactions: TypeTransaction[] }) {
   const income = transactions.reduce(
@@ -16,13 +18,14 @@ export default function Dashboard({ transactions }: { transactions: TypeTransact
   // current balance diff of incom and expenses
   const balance = income - expenses;
 
-  debugger;
   return (
     <>
+    <article className={styles.cards}>
       <BalanceCard balance={balance} />
       <IncomeCard income={income} />
       <ExpensesCard expenses={expenses} />
-      <TransactionList transactions={transactions} />
+    </article> 
+    <TransactionList transactions={transactions} />
     </>
   );
 }
