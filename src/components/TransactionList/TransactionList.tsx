@@ -9,7 +9,7 @@ export default function TransactionList({ transactions }: { transactions: TypeTr
     <Card>
       <h2>Transactions</h2>
         {transactions.map((tx) => (
-            <Transaction key={tx.id} amount={tx.amount} title={tx.title} type={tx.type}/>
+            <Transaction key={tx.id} transaction={tx}/>
         ))}
     </Card>
   );
