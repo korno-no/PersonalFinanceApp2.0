@@ -1,7 +1,7 @@
 import BalanceCard from "../BalanceCard";
 import IncomeCard from "../IncomeCard";
 import ExpensesCard from "../ExpensesCard";
-import TransactionList from "../TransactionList";
+import TransactionList from "../TransactionList/TransactionList";
 import type { TypeTransaction } from "../../types/transaction";
 import styles from './Dashboard.module.css';
 

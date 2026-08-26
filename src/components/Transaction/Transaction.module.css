@@ -1,0 +1,13 @@
+.income{
+    color: green;
+}
+
+.expense{
+    color: red;
+}
+
+.transaction{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between 
+}
