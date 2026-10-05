@@ -1,4 +1,8 @@
-.cards{
+.cards3{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns using fractional units */
+}
+.cards2{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
 }

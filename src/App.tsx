@@ -9,18 +9,24 @@ const mockTransactionsList: TypeTransaction[] = [
     title: "first transaction",
     amount: 5000,
     type: "income",
+    date:  new Date('2026-09-1'),
+    category: "salary"
   },
   {
     id: 2,
     title: "bills",
     amount: 300,
     type: "expense",
+    date:  new Date('2026-09-15'),
+    category: "bills"
   },
   {
     id: 3,
     title: "ice cream",
     amount: 20,
     type: "expense",
+    date:  new Date('2026-09-10'),
+    category: "food"
   },
 ];
 
